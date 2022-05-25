@@ -1,5 +1,8 @@
 package views;
 
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -7,7 +10,8 @@ import java.awt.FlowLayout;
 
 public class MainFrame extends JFrame {
   JPanel mainPanel;
-
+  public DefaultComboBoxModel<String> defaultGroupModel;
+  public JComboBox<String> groupComboBox;
   public MainFrame() {
 
     setComponents();
@@ -16,6 +20,8 @@ public class MainFrame extends JFrame {
   }
 
   private void setComponents() {
+    this.defaultGroupModel = new DefaultComboBoxModel<>();
+    this.groupComboBox = new JComboBox<>(defaultGroupModel);
 
   }
 
@@ -26,6 +32,7 @@ public class MainFrame extends JFrame {
       new BorderLayout()
     );
 
+    this.mainPanel.add(groupComboBox);
     this.add(this.mainPanel);
   }
 
