@@ -33,6 +33,8 @@ public class MainFrame extends JFrame {
     this.defaultGroupModel = new DefaultComboBoxModel<>();
     this.groupComboBox = new JComboBox<>(defaultGroupModel);
 
+    defaultGroupModel.addElement("Válasszon osztályt..");
+
     this.defaultListModel = new DefaultListModel<>();
     this.studentList = new JList<>(defaultListModel);
     this.scrollPane = new JScrollPane(studentList);

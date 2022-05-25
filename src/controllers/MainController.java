@@ -32,6 +32,7 @@ public class MainController {
     studentVector = this.mainModel.studentVector;
     groupList = this.mainModel.groupList;
 
+
     groupList.forEach(group -> {
       defaultGroupModel.addElement(group.name);
     });
@@ -42,7 +43,7 @@ public class MainController {
   private void handleComboBoxAction() {
 
     int index = groupComboBox.getSelectedIndex();
-    int groupId = index + 1;
+    int groupId = index;
     this.mainFrame.defaultListModel.clear();
     studentVector.forEach(student -> {
       if (groupId == student.groupId) {
