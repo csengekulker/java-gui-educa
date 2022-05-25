@@ -28,5 +28,5 @@ public class MainModel {
     };
 
     // convert array to vector
-    public Vector<Student> studentList = new Vector<>(Arrays.asList(studentArray));
+    public Vector<Student> studentVector = new Vector<>(Arrays.asList(studentArray));
 }
